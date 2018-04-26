@@ -2,12 +2,12 @@
 
 >
 >>## TODO
->>> - [x] service-worker
->>> - [x] typescript
->>> - [x] polyfill
->>> - [x] test
->> - [x] some tools...
-
+>>> - [] service-worker
+>>> - [] typescript
+>>> - [] polyfill
+>>> - [] test
+>>> - [] some tools...
+>>> - [] npm repository
 ---
 
 >
