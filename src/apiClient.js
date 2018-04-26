@@ -9,23 +9,7 @@ export default class ApiClient {
   withBodyMethods = ['post', 'patch', 'put']
   withoutBodyMethods = ['get', 'head', 'delete', 'options']
 
-  static requestTypes = (actionTypePrefix = '@@REDUX-API/') => (actionType) => {
-    const tmpBaseType = `${actionTypePrefix}${actionType}`
-    const REQUEST = `${tmpBaseType}__REQUEST`
-    const SUCCESS = `${tmpBaseType}__SUCCESS`
-    const FAILURE = `${tmpBaseType}__FAILURE`
-
-    return {
-      R: REQUEST,
-      S: SUCCESS,
-      F: FAILURE,
-      REQUEST,
-      SUCCESS,
-      FAILURE,
-    }
-  }
-
-  getReqUrl = (urlPath) => {
+  getReqUrl = urlPath => {
     if (urlPath.startsWith('http')) {
       return urlPath
     }
@@ -56,7 +40,7 @@ export default class ApiClient {
     return reqConfig
   }
 
-  initMethod = (type) => {
+  initMethod = type => {
     this[type] = (urlPath, data, config = {}) =>
       fetch(this.getReqUrl(urlPath), this.getReqConfig(data, type, config))
   }
