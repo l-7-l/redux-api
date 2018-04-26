@@ -8,5 +8,10 @@ rules:
     - error
     - single
 
+  arrow-parens:
+    - error
+    - as-needed
+
+
 globals:
   fetch: true
