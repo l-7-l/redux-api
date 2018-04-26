@@ -1,0 +1,12 @@
+parser: babel-eslint
+extends: airbnb-base
+rules:
+  semi:
+    - error
+    - never
+  quotes:
+    - error
+    - single
+
+globals:
+  fetch: true
